@@ -2,15 +2,6 @@
 
 A template and reference implementation for creating specialized AI agents in Claude Code. This framework demonstrates best practices for building collaborative AI agents that enhance software development workflows.
 
-## TL;DR
-
-**Spec-driven development for AI agents** - Inspired by AWS Kiro's spec-driven development. Give AI precise context through specifications for exceptional results.
-
-**Quick Start:** `cp personas/*.md /Users/<username>/.claude/agents/` then:
-```bash
-@product-manager create PRD → @strategic-planner design → @task-executor implement → @code-reviewer verify
-```
-
 ## What is This?
 
 This is a **template project** that serves as:
@@ -20,6 +11,25 @@ This is a **template project** that serves as:
 - 🚀 **Quick Start Template**: Bootstrap your own agent-powered workflows
 
 **Note**: This is not a standalone application, but rather a collection of agent definitions and patterns designed to be integrated into Claude Code for enhanced development capabilities.
+
+## Overview
+
+The Claude Code Agent Framework is a **collection of specialized AI agents** designed to enhance software development workflows through systematic, spec-driven development. Each agent has a specific role, expertise, and optimized toolset - from strategic planning and implementation to quality assurance and debugging.
+
+**Key Benefits:**
+- 🎯 **Clear Specialization**: Each agent focuses on one domain (planning, coding, reviewing, etc.)
+- 📋 **Spec-Driven Approach**: Detailed specifications guide precise implementation
+- 🔄 **Collaborative Workflow**: Agents work together through defined handoff patterns
+- ⚡ **Reduced Context Switching**: Specialized agents maintain focus and expertise
+
+## TL;DR
+
+**Spec-driven development for AI agents** - Inspired by AWS Kiro's spec-driven development. Give AI precise context through specifications for exceptional results.
+
+**Quick Start:** `cp personas/*.md /Users/<username>/.claude/agents/` then:
+```bash
+@product-manager create PRD → @strategic-planner design → @task-executor implement → @code-reviewer verify
+```
 
 ## Core Philosophy: Spec-Driven Development
 
@@ -52,10 +62,6 @@ This approach ensures that AI agents work with the same clarity and precision as
 1. **Modify Existing Agents**: Adjust responsibilities and tools for your needs
 2. **Create New Agents**: Use the template to build domain-specific agents
 3. **Share Back**: Contribute improvements to help the community
-
-## Overview
-
-The Claude Code Agent Framework enables **systematic, spec-driven software development** through specialized AI agents. By providing precise context through detailed specifications, each agent operates with clarity and purpose - transforming vague requirements into well-executed implementations. Each agent has a specific role, expertise, and set of tools optimized for their domain, following the principle that **clear specifications lead to exceptional results**.
 
 ## Core Agents
 
@@ -214,6 +220,67 @@ proactive: true                    # Can activate automatically
 [Guidelines and standards]
 ```
 
+## Project Structure
+
+This framework follows a clear organizational pattern designed for spec-driven development:
+
+```
+claude-code-agents/
+├── 📄 llms.txt                   # Quick project summary for LLM context
+├── 📖 README.md                  # Complete framework documentation
+├── ⚙️ CLAUDE.md                  # Claude Code configuration & instructions
+├── 📁 .docs/                     # Project-wide documentation
+│   ├── product.md               # Project vision, goals, and requirements
+│   ├── tech.md                  # Technology stack and architectural decisions
+│   └── structure.md             # File organization and naming conventions
+├── 📁 specs/                     # Feature specifications directory
+│   └── <feature-name>/          # Individual feature planning
+│       ├── requirements.md      # User stories and acceptance criteria
+│       ├── design.md            # Technical architecture and approach
+│       └── tasks.md             # Step-by-step implementation checklist
+└── 🤖 personas/                  # AI agent definitions
+    ├── strategic-planner.md     # Planning and architecture agent
+    ├── task-executor.md         # Implementation and coding agent
+    ├── code-reviewer.md         # Quality assurance agent
+    ├── steering-architect.md    # Project analysis agent
+    ├── debugger.md              # Error troubleshooting agent
+    ├── data-scientist.md        # Data analysis agent
+    ├── product-manager.md       # Requirements definition agent
+    └── llms-txt-generator.md    # Context optimization agent
+```
+
+### Key Directory Purposes
+
+| Directory/File | Purpose | Usage |
+|---|---|---|
+| **📄 llms.txt** | Concise project overview following [llmstxt.org](https://llmstxt.org) standard | Quick LLM context, reduced token usage |
+| **⚙️ CLAUDE.md** | Claude Code specific configuration and instructions | Project-specific AI behavior rules |
+| **📁 .docs/** | Global project documentation for agent context | Shared understanding across all agents |
+| **📁 specs/** | Feature-specific planning and implementation guides | Organized development specifications |
+| **🤖 personas/** | Agent behavior definitions and specialized workflows | Reusable AI agent templates |
+
+### Files in Detail
+
+**Core Documentation:**
+- `llms.txt` - Single-file project summary optimized for AI understanding
+- `README.md` - Human-readable framework documentation and usage guide
+- `CLAUDE.md` - AI-specific instructions and project configuration
+
+**Project Context (`.docs/`):**
+- `product.md` - Vision, goals, and high-level requirements
+- `tech.md` - Technology choices, architecture decisions, and constraints
+- `structure.md` - File organization patterns and naming conventions
+
+**Feature Planning (`specs/<feature>/`):**
+- `requirements.md` - User stories, acceptance criteria, and business logic
+- `design.md` - Technical architecture, data flow, and implementation approach
+- `tasks.md` - Granular implementation checklist with progress tracking
+
+**Agent Definitions (`personas/`):**
+- Each `.md` file defines a specialized AI agent with specific tools and workflows
+- Agents can be copied to `~/.claude/agents/` for global access
+- YAML frontmatter defines agent capabilities and triggers
+
 ## Adding Agents to Claude Code
 
 ### Step 1: Understanding Integration
@@ -311,40 +378,6 @@ Select from available Claude Code tools:
 - Submit PRs with new agents
 - Share successful patterns
 - Document lessons learned
-
-## Project Structure
-
-```
-.
-├── llms.txt                   # Concise project summary for LLMs
-├── README.md                  # This file
-├── CLAUDE.md                  # Claude Code specific instructions
-├── .docs/                     # Global project context
-│   ├── product.md             # Vision and goals
-│   ├── tech.md                # Technology stack
-│   └── structure.md           # Conventions
-├── specs/                     # Feature specifications
-│   └── <feature-name>/
-│       ├── requirements.md    # User stories
-│       ├── design.md          # Technical design
-│       └── tasks.md           # Implementation checklist
-└── personas/                  # Agent definitions
-    ├── strategic-planner.md
-    ├── task-executor.md
-    ├── code-reviewer.md
-    ├── steering-architect.md
-    ├── debugger.md
-    ├── data-scientist.md
-    ├── product-manager.md
-    └── llms-txt-generator.md
-```
-
-### File Purposes
-- **llms.txt**: Quick project overview following llmstxt.org standard
-- **CLAUDE.md**: Specific instructions for Claude Code instances
-- **.docs/**: Detailed project documentation for agent context
-- **specs/**: Feature-specific planning and implementation guides
-- **personas/**: Agent behavior definitions and workflows
 
 ## Workflow Patterns
 
