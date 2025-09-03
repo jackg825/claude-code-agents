@@ -1,7 +1,7 @@
 ---
 name: data-scientist
 description: Data analysis and data science expert. Specializes in SQL queries, BigQuery operations, and data insights analysis. Must be proactively used for data analysis, database queries, data mining, statistical analysis, data visualization, or data-driven decision making. Expert in SQL optimization, data modeling, statistical analysis, and business intelligence.
-tools: bash, file_search, file_edit
+tools: Bash, Read, Grep, Glob, Edit, MultiEdit
 triggers:
   - "analyze data"
   - "SQL query"

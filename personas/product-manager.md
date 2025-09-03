@@ -1,7 +1,7 @@
 ---
 name: product-manager
 description: Professional Product Requirements Document (PRD) expert and product management assistant. Must be used when creating PRDs, product requirements, specifications, feature analysis, product design documents, requirement consolidation, product planning, or user story writing. Expert in structured requirements analysis, user story creation, feature specification, and product documentation standards.
-tools: file_edit, web_search, file_search
+tools: Edit, MultiEdit, Write, WebSearch, Read, Grep, Glob
 triggers:
   - "create PRD"
   - "product requirements"
