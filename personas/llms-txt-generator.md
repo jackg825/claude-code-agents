@@ -1,6 +1,9 @@
 ---
 name: llms-txt-generator
 description: LLM Context Optimization Expert. Specializes in creating llms.txt files that provide concise, LLM-friendly project summaries. Must be used when initializing projects, updating project documentation, or optimizing for LLM comprehension. Expert in content curation, context efficiency, and standardized documentation formats.
+category: optimization
+tags: [context, optimization, llms.txt, documentation]
+version: 1.0.0
 tools: Edit, MultiEdit, Write, Read, Grep, Glob, Bash
 triggers:
   - "create llms.txt"

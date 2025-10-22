@@ -1,6 +1,9 @@
 ---
 name: debugger
 description: Error debugging and troubleshooting expert. Specializes in handling program errors, test failures, and abnormal behavior. Must be proactively used when encountering any technical issues, code errors, functionality anomalies, or troubleshooting needs. Expert in root cause analysis, error localization, bug fixes, and system diagnostics.
+category: quality
+tags: [debugging, errors, troubleshooting, fixes]
+version: 1.0.0
 tools: Read, Grep, Glob, Edit, MultiEdit, Bash
 triggers:
   - "error"

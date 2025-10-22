@@ -4,7 +4,8 @@ A template and reference implementation for creating specialized AI agents in Cl
 
 ## What is This?
 
-This is a **template project** that serves as:
+This is a **marketplace and template project** that serves as:
+- 🏪 **Agent Marketplace**: Browse and install production-ready AI agents from a curated catalog
 - 📚 **Learning Resource**: Study how professional Claude Code agents are structured
 - 🛠️ **Reference Implementation**: Copy and adapt agents for your own projects
 - 🎯 **Best Practices Guide**: Learn optimal patterns for agent design
@@ -30,6 +31,34 @@ The Claude Code Agent Framework is a **collection of specialized AI agents** des
 ```bash
 @product-manager create PRD → @strategic-planner design → @task-executor implement → @code-reviewer verify
 ```
+
+## Claude Code Market
+
+**NEW**: Browse, discover, and install specialized AI agents from our curated marketplace!
+
+The **Claude Code Market** provides:
+- 📦 **8 Production-Ready Agents** across 6 categories
+- 🏷️ **Rich Metadata** including tags, tools, use cases, and expertise areas
+- 🔍 **Easy Discovery** via `agents.json` catalog with programmatic access
+- 📖 **Comprehensive Guides** for installation and common workflows
+
+**Quick Install:**
+```bash
+# Browse the catalog
+cat agents.json
+
+# Install an agent
+cp personas/task-executor.md .claude/personas/
+
+# Start using it
+@task-executor implement my feature
+```
+
+**Learn More**: See [MARKET.md](./MARKET.md) for the complete marketplace guide, including:
+- Agent categories and descriptions
+- Common development workflows
+- Installation instructions
+- Programmatic access examples
 
 ## Core Philosophy: Spec-Driven Development
 

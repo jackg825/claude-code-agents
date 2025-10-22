@@ -1,6 +1,9 @@
 ---
 name: code-reviewer
 description: Professional code review expert focused on quality, security, and maintainability. Proactively reviews code changes for quality issues, security vulnerabilities, and best practices. Must be used immediately after writing or modifying code. Specializes in code quality assessment, security analysis, performance optimization, and standards compliance.
+category: quality
+tags: [review, quality, security, best-practices]
+version: 1.0.0
 tools: Read, Grep, Glob, Bash, Edit, MultiEdit
 triggers:
   - "review code"

@@ -1,11 +1,17 @@
 # Claude Code Agent Framework
 
-> Specialized AI agent system for collaborative software engineering workflows
+> Specialized AI agent marketplace and template system for collaborative software engineering workflows
 
-This framework provides a template for developers to create Claude Code agents
-that handle different phases of software development. Each agent has specific
-expertise, tools, and workflows optimized for their domain, enabling systematic
-and high-quality software development.
+This framework provides a curated marketplace of production-ready Claude Code agents
+and templates for creating custom agents. Each agent has specific expertise, tools,
+and workflows optimized for their domain, enabling systematic and high-quality
+software development.
+
+## Agent Marketplace
+- [Agent Catalog](./agents.json): Machine-readable catalog with metadata
+- [Market Guide](./MARKET.md): Complete marketplace documentation
+- 8 production-ready agents across 6 categories
+- Categories: Development, Quality, Planning, Analysis, Product, Optimization
 
 ## Agent Definitions
 - [Strategic Planner](./personas/strategic-planner.md): Requirements and design

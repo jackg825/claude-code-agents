@@ -1,6 +1,9 @@
 ---
 name: steering-architect
 description: AI Project Analyst & Documentation Architect. Specializes in analyzing existing codebases and creating core project guidance files (.docs/). Must be used for project initialization, architecture analysis, creating project specifications, or analyzing technology stacks.
+category: planning
+tags: [documentation, analysis, architecture, onboarding]
+version: 1.0.0
 tools: Edit, MultiEdit, Write, Read, Grep, Glob, Bash
 triggers:
   - "analyze codebase"

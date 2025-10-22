@@ -15,12 +15,16 @@ This is an AI agent development framework designed for collaborative software en
 
 ### Core Agent Types
 
-The system defines specialized agents in `/draft/`:
+The system defines specialized agents in `/personas/`:
 
 - `@strategic-planner`: Requirements analysis, technical design, and task planning (no code execution)
 - `@task-executor`: Surgical precision implementation of individual tasks from task lists
 - `@code-reviewer`: Post-implementation quality and security review
 - `@steering-architect`: Project analysis and core documentation creation
+- `@debugger`: Error analysis and root cause identification
+- `@data-scientist`: SQL optimization and statistical analysis
+- `@product-manager`: PRD creation and requirements specification
+- `@llms-txt-generator`: Context optimization and llms.txt generation
 
 ### Agent Interaction Pattern
 
@@ -33,12 +37,18 @@ The system defines specialized agents in `/draft/`:
 
 ```
 .
-├── draft/                  # Agent definitions and specifications
+├── personas/              # Agent definitions and specifications
 │   ├── code-reviewer.md   # Code review agent spec
 │   ├── task-executor.md   # Implementation agent spec
 │   ├── strategic-planner.md # Planning agent spec
-│   └── steering-architect.md # Architecture agent spec
-└── READMD.md              # Project workflow documentation
+│   ├── steering-architect.md # Architecture agent spec
+│   ├── debugger.md        # Debugging agent spec
+│   ├── data-scientist.md  # Data analysis agent spec
+│   ├── product-manager.md # Product management agent spec
+│   └── llms-txt-generator.md # Context optimization agent spec
+├── agents.json            # Agent marketplace catalog
+├── README.md              # Project workflow documentation
+└── CLAUDE.md              # Claude Code specific instructions
 ```
 
 ### Expected Structure for Projects Using This Framework
@@ -121,10 +131,32 @@ All code changes must pass through `@code-reviewer` which checks:
 
 ## Important Notes
 
-- This framework uses Chinese language documentation for agent specifications
-- The `READMD.md` filename appears to be intentional (not a typo)
 - No build, test, or lint commands are defined at the framework level (these would be project-specific)
 - The framework emphasizes collaborative, spec-driven development methodology
+- Agent catalog is available in `agents.json` for programmatic access
+- All agents are available in the `/personas/` directory for easy installation
+
+## Claude Code Market
+
+The repository includes a curated marketplace of specialized AI agents:
+
+### Agent Catalog
+- **File**: `agents.json` provides a machine-readable catalog of all available agents
+- **Categories**: Development, Quality Assurance, Planning & Architecture, Data & Analysis, Product Management, Optimization
+- **Metadata**: Each agent includes description, tools, triggers, use cases, and expertise areas
+
+### Installation
+1. Browse the agent catalog in `agents.json` or `personas/` directory
+2. Choose an agent that fits your needs
+3. Copy the agent file (e.g., `personas/task-executor.md`)
+4. Paste it into your project's `.claude/personas/` directory
+5. Invoke with @ mention (e.g., `@task-executor implement feature`)
+
+### Workflows
+The market supports common development workflows:
+- **Feature Development**: @steering-architect → @product-manager → @strategic-planner → @task-executor → @code-reviewer
+- **Debugging**: @debugger → @code-reviewer
+- **Data Analysis**: @data-scientist
 
 ## Context Optimization
 

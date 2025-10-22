@@ -1,0 +1,226 @@
+{
+  "version": "1.0.0",
+  "name": "Claude Code Agents Market",
+  "description": "A curated collection of specialized AI agents for Claude Code",
+  "repository": "https://github.com/jackg825/claude-code-agents",
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Agents for software development and implementation"
+    },
+    {
+      "id": "quality",
+      "name": "Quality Assurance",
+      "description": "Agents for code review, testing, and debugging"
+    },
+    {
+      "id": "planning",
+      "name": "Planning & Architecture",
+      "description": "Agents for project planning and architectural design"
+    },
+    {
+      "id": "analysis",
+      "name": "Data & Analysis",
+      "description": "Agents for data analysis and insights"
+    },
+    {
+      "id": "product",
+      "name": "Product Management",
+      "description": "Agents for product strategy and requirements"
+    },
+    {
+      "id": "optimization",
+      "name": "Optimization",
+      "description": "Agents for performance and context optimization"
+    }
+  ],
+  "agents": [
+    {
+      "id": "strategic-planner",
+      "name": "Strategic Planner",
+      "description": "Software architect specializing in requirements analysis, technical design, and task planning",
+      "category": "planning",
+      "tags": ["architecture", "design", "planning", "specs", "requirements"],
+      "file": "personas/strategic-planner.md",
+      "tools": ["Edit", "MultiEdit", "Read", "Grep", "Glob", "WebSearch"],
+      "triggers": ["plan", "design", "architect", "spec"],
+      "use_cases": [
+        "Create technical specifications for new features",
+        "Design system architecture",
+        "Break down complex requirements into tasks",
+        "Analyze technical feasibility"
+      ],
+      "expertise": ["Requirements analysis", "Technical design", "Task decomposition", "AWS Kiro methodology"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "task-executor",
+      "name": "Task Executor",
+      "description": "Precision implementation specialist executing tasks with surgical accuracy",
+      "category": "development",
+      "tags": ["implementation", "coding", "execution", "development"],
+      "file": "personas/task-executor.md",
+      "tools": ["Edit", "MultiEdit", "Write", "Read", "Bash", "Grep", "Glob"],
+      "triggers": ["execute", "implement", "code", "build"],
+      "use_cases": [
+        "Execute individual tasks from task lists",
+        "Implement features step-by-step",
+        "Make surgical code changes",
+        "Follow specifications precisely"
+      ],
+      "expertise": ["Precise implementation", "Task execution", "Code modification", "Test-driven development"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "code-reviewer",
+      "name": "Code Reviewer",
+      "description": "Quality assurance expert for security, performance, and code quality reviews",
+      "category": "quality",
+      "tags": ["review", "quality", "security", "best-practices"],
+      "file": "personas/code-reviewer.md",
+      "tools": ["Read", "Grep", "Glob", "Bash", "Edit", "MultiEdit"],
+      "triggers": ["review", "check", "audit", "validate"],
+      "use_cases": [
+        "Review code changes for quality issues",
+        "Identify security vulnerabilities",
+        "Check for code duplication",
+        "Validate error handling",
+        "Assess performance implications"
+      ],
+      "expertise": ["Security review", "Code quality", "Performance analysis", "Best practices"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "steering-architect",
+      "name": "Steering Architect",
+      "description": "Project analyst creating foundational documentation and codebase analysis",
+      "category": "planning",
+      "tags": ["documentation", "analysis", "architecture", "onboarding"],
+      "file": "personas/steering-architect.md",
+      "tools": ["Edit", "MultiEdit", "Write", "Read", "Grep", "Glob", "Bash"],
+      "triggers": ["analyze", "document", "structure"],
+      "use_cases": [
+        "Analyze existing codebases",
+        "Create project documentation",
+        "Generate .docs/ foundation",
+        "Onboard new projects"
+      ],
+      "expertise": ["Codebase analysis", "Documentation generation", "Project structure", "Pattern recognition"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "debugger",
+      "name": "Debugger",
+      "description": "Expert debugger specializing in error analysis and root cause identification",
+      "category": "quality",
+      "tags": ["debugging", "errors", "troubleshooting", "fixes"],
+      "file": "personas/debugger.md",
+      "tools": ["Read", "Grep", "Glob", "Edit", "MultiEdit", "Bash"],
+      "triggers": ["debug", "fix", "error", "issue"],
+      "use_cases": [
+        "Analyze error messages and stack traces",
+        "Identify root causes of bugs",
+        "Propose and implement fixes",
+        "Troubleshoot failing tests"
+      ],
+      "expertise": ["Error analysis", "Root cause identification", "Bug fixing", "Debugging strategies"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "data-scientist",
+      "name": "Data Scientist",
+      "description": "Data analysis expert for SQL optimization and statistical insights",
+      "category": "analysis",
+      "tags": ["data", "sql", "analytics", "statistics"],
+      "file": "personas/data-scientist.md",
+      "tools": ["Read", "Grep", "Glob", "Edit", "MultiEdit", "Bash"],
+      "triggers": ["analyze data", "query", "metrics"],
+      "use_cases": [
+        "Optimize SQL queries",
+        "Analyze data patterns",
+        "Generate statistical insights",
+        "Create data visualizations"
+      ],
+      "expertise": ["SQL optimization", "Statistical analysis", "Data modeling", "Query performance"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "description": "Product expert creating PRDs and requirements specifications",
+      "category": "product",
+      "tags": ["product", "requirements", "prd", "user-stories"],
+      "file": "personas/product-manager.md",
+      "tools": ["Edit", "MultiEdit", "Write", "Read", "Grep", "Glob", "WebSearch"],
+      "triggers": ["prd", "requirements", "user story"],
+      "use_cases": [
+        "Create Product Requirements Documents",
+        "Define user stories and acceptance criteria",
+        "Analyze market requirements",
+        "Specify product features"
+      ],
+      "expertise": ["PRD creation", "Requirements specification", "User story writing", "Product strategy"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "llms-txt-generator",
+      "name": "LLMs.txt Generator",
+      "description": "Context optimization specialist creating standardized LLM-friendly project summaries",
+      "category": "optimization",
+      "tags": ["context", "optimization", "llms.txt", "documentation"],
+      "file": "personas/llms-txt-generator.md",
+      "tools": ["Edit", "MultiEdit", "Write", "Read", "Grep", "Glob", "Bash"],
+      "triggers": ["llms.txt", "context", "optimize"],
+      "use_cases": [
+        "Generate llms.txt files",
+        "Optimize project context for LLMs",
+        "Create concise project summaries",
+        "Follow llmstxt.org specification"
+      ],
+      "expertise": ["Context optimization", "LLM efficiency", "Project summarization", "llmstxt.org standard"],
+      "version": "1.0.0"
+    }
+  ],
+  "installation": {
+    "method": "copy",
+    "instructions": "Copy the desired agent file from personas/ to your Claude Code project's .claude/personas/ directory",
+    "steps": [
+      "Browse the agents catalog",
+      "Choose an agent that fits your needs",
+      "Copy the agent file (e.g., personas/task-executor.md)",
+      "Paste it into your project's .claude/personas/ directory",
+      "Invoke the agent with @ mention (e.g., @task-executor)"
+    ]
+  },
+  "usage": {
+    "invocation": "Use @ mentions to invoke agents (e.g., @strategic-planner plan user authentication)",
+    "workflows": [
+      {
+        "name": "Feature Development",
+        "steps": [
+          "@steering-architect analyze codebase",
+          "@product-manager create PRD",
+          "@strategic-planner design feature",
+          "@task-executor implement tasks",
+          "@code-reviewer review changes"
+        ]
+      },
+      {
+        "name": "Debugging",
+        "steps": [
+          "@debugger analyze error",
+          "@debugger implement fix",
+          "@code-reviewer review fix"
+        ]
+      },
+      {
+        "name": "Data Analysis",
+        "steps": [
+          "@data-scientist analyze data",
+          "@data-scientist optimize queries"
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,9 @@
 ---
 name: task-executor
 description: Meticulous AI Software Engineer focused on executing single, concrete tasks with surgical precision. Strictly follows task checklists and implements features step-by-step. Must be used when executing specific coding tasks, implementing features, fixing bugs, or running tests.
+category: development
+tags: [implementation, coding, execution, development]
+version: 1.0.0
 tools: Edit, MultiEdit, Write, Read, Bash, Grep, Glob
 triggers:
   - "execute tasks"
